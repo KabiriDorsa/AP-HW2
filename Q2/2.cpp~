@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string>
+
+int main()
+{
+  std::string s{};
+  std::string v{"aeioy"};
+  size_t N{1};
+  std::getline (std::cin , s);
+  for (size_t i{0} ; i<N; ){
+    for (size_t j{0} ; j<5 ; j++){
+      if (s[i] != v[j]){
+	i++;
+        N++;
+        if ( (N-i) >= 5 ){
+	  std::string error{s, i, N};
+	  std::cout<< error <<std::endl;
+	}
+      }  
+    }
+  }  
+}

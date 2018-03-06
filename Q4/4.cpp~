@@ -1,0 +1,17 @@
+#include<iostream>
+
+int main()
+{
+  size_t N{1};
+  int* numbers{new int[N]};
+  std::cout<< "enter the numbers and enter 0 when finished" <<std::endl;
+
+  for (size_t i{0} ; i<N ; i++){
+    std::cin >> *(numbers+i) ;
+    if( *(numbers+i) !=0){
+      N++;
+    }
+  }
+  std::cout << "the numbers you have entered are sorted "<<std::endl;
+  return 0 ;
+}

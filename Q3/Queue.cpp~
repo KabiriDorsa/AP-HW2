@@ -1,0 +1,10 @@
+#include<iostream>
+#include"Box.h"
+
+
+int main()
+{
+  Box b{1,2,3};
+  std::cout<<b.l <<" "<<b.h <<" "<<b.w <<std::endl;
+  return 0;
+}

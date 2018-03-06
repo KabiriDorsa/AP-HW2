@@ -1,0 +1,20 @@
+#include<iostream>
+
+int main()
+{
+  size_t N{2};
+  int* numbers{new int[N]};
+  std::cout<< "enter the numbers and enter 0 when finished" <<std::endl;
+  std::cin >> *numbers;
+  if ( *numbers !== 0){
+    for (size_t i{1} ; i<N ; i++){
+      std::cin >> *(numbers + i);
+      while ( *(numbers+i) !== 0){
+	N++;
+      }
+    }
+  }
+  for(size_t j{0} ; j<N ; j++)
+    std::cout<< *(numbers+j) <<std::endl;
+  return 0 ;
+}

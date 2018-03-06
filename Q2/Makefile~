@@ -1,0 +1,13 @@
+CXX = g++
+CXXFLAGS = -std=c++14 -Wall -c
+LXXFLAGS = -std=c++14
+OBJECTS = 3.o
+TARGET = 3
+
+
+$(TARGET): $(OBJECTS)
+	$(CXX) $(LXXFLAGS) $(OBJECTS) -o $(TARGET)
+3.o: 3.cpp
+	$(CXX) $(CXXFLAGS) 3.cpp
+clean:
+	rm -f $(TARGET) $(OBJECTS)

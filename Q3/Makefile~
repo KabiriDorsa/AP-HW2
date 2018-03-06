@@ -1,0 +1,15 @@
+CXX = g++
+CXXFLAGS = -std=c++14 -Wall -c
+LXXFLAGS = -std=c++14
+OBJECTS = test.o
+TARGET = test
+
+
+$(TARGET): $(OBJECTS)
+	$(CXX) $(LXXFLAGS) $(OBJECTS) -o $(TARGET)
+test.o: test.cpp
+	$(CXX) $(CXXFLAGS) test.cpp
+Box.o: Box.cpp
+	$(CXX) $(CXXFLAGS) Box.cpp
+clean:
+	rm -f $(TARGET) $(OBJECTS)
